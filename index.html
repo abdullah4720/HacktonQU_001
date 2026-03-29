@@ -333,25 +333,25 @@ canvas { display:block; width:100% !important; }
   <div class="kpi-strip">
     <div class="kpi-box t">
       <div class="kpi-ico">🏆</div>
-      <div class="kpi-n">207</div>
+      <div class="kpi-n">221</div>
       <div class="kpi-lbl">الفرق المسجلة</div>
       <div class="kpi-sub">نموذج التسجيل الرئيسي</div>
     </div>
     <div class="kpi-box g">
       <div class="kpi-ico">👥</div>
-      <div class="kpi-n">459</div>
+      <div class="kpi-n">504</div>
       <div class="kpi-lbl">إجمالي الأعضاء</div>
       <div class="kpi-sub">بيانات تفصيلية للفرق</div>
     </div>
     <div class="kpi-box p">
       <div class="kpi-ico">💡</div>
-      <div class="kpi-n">181</div>
+      <div class="kpi-n">193</div>
       <div class="kpi-lbl">مسار الابتكار</div>
       <div class="kpi-sub">89% من إجمالي الفرق</div>
     </div>
     <div class="kpi-box gr">
       <div class="kpi-ico">🎯</div>
-      <div class="kpi-n">26</div>
+      <div class="kpi-n">28</div>
       <div class="kpi-lbl">مسار التحديات</div>
       <div class="kpi-sub">11% من إجمالي الفرق</div>
     </div>
@@ -399,11 +399,11 @@ canvas { display:block; width:100% !important; }
       <div class="prog-list">
         <div class="prog-row">
           <div class="prog-meta"><span class="prog-nm">أنثى</span><span class="prog-vl">224 · 65.5%</span></div>
-          <div class="prog-trk"><div class="prog-fill" style="width:65.4%;background:var(--purple);"></div></div>
+          <div class="prog-trk"><div class="prog-fill" style="width:65.7%;background:var(--purple);"></div></div>
         </div>
         <div class="prog-row">
           <div class="prog-meta"><span class="prog-nm">ذكر</span><span class="prog-vl">117 · 34.2%</span></div>
-          <div class="prog-trk"><div class="prog-fill" style="width:34.4%;background:var(--navy);"></div></div>
+          <div class="prog-trk"><div class="prog-fill" style="width:34.1%;background:var(--navy);"></div></div>
         </div>
       </div>
       <canvas id="genderChart" height="150" style="margin-top:16px;"></canvas>
@@ -421,7 +421,7 @@ canvas { display:block; width:100% !important; }
   <!-- Charts row 2 -->
   <div class="grid2" style="margin-top:20px;">
     <div class="ccard">
-      <div class="chead"><div class="ctitle">🔧 أدوار أعضاء الفريق</div><div class="chip">459</div></div>
+      <div class="chead"><div class="ctitle">🔧 أدوار أعضاء الفريق</div><div class="chip">504</div></div>
       <div class="role-list" id="roleList"></div>
     </div>
     <div class="ccard">
@@ -499,7 +499,7 @@ canvas { display:block; width:100% !important; }
 
 <!-- FOOTER -->
 <footer class="app-footer">
-  <p>حاضنة ابتكار — النسخة الخامسة · جامعة القصيم · 459 عضو · 207 فريق</p>
+  <p>حاضنة ابتكار — النسخة الخامسة · جامعة القصيم · 504 عضو · 221 فريق</p>
   <p class="mono">Incubator-5 Dashboard © 2026</p>
 </footer>
 
@@ -543,7 +543,7 @@ const nScales = {
 new Chart(document.getElementById('genderChart'),{
   type:'doughnut',
   data:{labels:['أنثى','ذكر'],datasets:[{
-    data:[300,158],
+    data:[331,172],
     backgroundColor:[C.purple,C.navy],
     borderWidth:0,hoverOffset:6
   }]},
@@ -555,7 +555,7 @@ new Chart(document.getElementById('genderChart'),{
 new Chart(document.getElementById('ageChart'),{
   type:'bar',
   data:{labels:['18-25','26-35','36-45','46-60'],datasets:[{
-    data:[308,76,42,32],
+    data:[332,87,49,35],
     backgroundColor:[C.navy,C.teal,C.goldb,C.purple],
     borderRadius:10,borderSkipped:false
   }]},
@@ -566,7 +566,7 @@ new Chart(document.getElementById('ageChart'),{
 new Chart(document.getElementById('catChart'),{
   type:'doughnut',
   data:{labels:['طالب جامعي','موظف','عضو هيئة تدريس'],datasets:[{
-    data:[317,83,58],
+    data:[341,90,72],
     backgroundColor:[C.navy,C.teal,C.goldb],
     borderWidth:0,hoverOffset:6
   }]},
@@ -587,7 +587,7 @@ if(roleEl) roleEl.innerHTML = roles.map(r=>`
   <div class="role-row">
     <div class="rl-dot" style="background:${r.c}"></div>
     <div class="rl-nm">${r.n}</div>
-    <div class="rl-bw"><div class="rl-bt"><div class="rl-bf" style="width:${Math.round(r.v/177*100)}%;background:${r.c};"></div></div></div>
+    <div class="rl-bw"><div class="rl-bt"><div class="rl-bf" style="width:${Math.round(r.v/193*100)}%;background:${r.c};"></div></div></div>
     <div class="rl-n" style="color:${r.c}">${r.v}</div>
   </div>`).join('');
 
@@ -595,7 +595,7 @@ if(roleEl) roleEl.innerHTML = roles.map(r=>`
 new Chart(document.getElementById('memberChart'),{
   type:'doughnut',
   data:{labels:['عضو فريق','مدير فريق'],datasets:[{
-    data:[280,179],
+    data:[313,191],
     backgroundColor:[C.teal,C.goldb],
     borderWidth:0,hoverOffset:6
   }]},
@@ -605,17 +605,17 @@ new Chart(document.getElementById('memberChart'),{
 
 // ── Cities list ──
 const cities=[
-  {n:'بريدة',v:283},{n:'الرياض',v:57},{n:'جدة',v:38},
-  {n:'الظهران',v:14},{n:'أبها',v:10},{n:'الطائف',v:8},
+  {n:'بريدة',v:314},{n:'الرياض',v:62},{n:'جدة',v:38},
+  {n:'أبها',v:14},{n:'الظهران',v:14},{n:'الطائف',v:8},
   {n:'الدمام',v:8},{n:'حفر الباطن',v:7},{n:'نجران',v:6},
-  {n:'حائل',v:6},{n:'جازان',v:6},{n:'مكة المكرمة',v:5}
+  {n:'حائل',v:6},{n:'عرعر',v:6},{n:'جازان',v:6}
 ];
 const cityEl = document.getElementById('cityList');
 if(cityEl) cityEl.innerHTML = cities.map((c,i)=>`
   <div class="city-row">
     <div class="city-rk">${i+1}</div>
     <div class="city-nm">${c.n}</div>
-    <div class="city-bw"><div class="city-bt"><div class="city-bf" style="width:${Math.round(c.v/283*100)}%"></div></div></div>
+    <div class="city-bw"><div class="city-bt"><div class="city-bf" style="width:${Math.round(c.v/314*100)}%"></div></div></div>
     <div class="city-nv">${c.v}</div>
   </div>`).join('');
 
@@ -623,7 +623,7 @@ if(cityEl) cityEl.innerHTML = cities.map((c,i)=>`
 new Chart(document.getElementById('teamSizeChart'),{
   type:'doughnut',
   data:{labels:['2 أعضاء','3 أعضاء','4 أعضاء','5 أعضاء','6 أعضاء'],datasets:[{
-    data:[115,28,16,12,8],
+    data:[120,29,16,18,8],
     backgroundColor:[C.teal,C.goldb,C.purple,C.green,'#54d4bc'],
     borderWidth:0,hoverOffset:6
   }]},
@@ -633,17 +633,17 @@ new Chart(document.getElementById('teamSizeChart'),{
 
 // ── Innovation topics ──
 const topics=[
-  {n:'صحة الإنسان',       v:94, c:C.teal},
-  {n:'اقتصاديات المستقبل',v:49, c:C.goldb},
+  {n:'صحة الإنسان',       v:99, c:C.teal},
+  {n:'اقتصاديات المستقبل',v:53, c:C.goldb},
   {n:'استدامة البيئة',    v:22, c:C.purple},
-  {n:'الريادة في الطاقة', v:14, c:C.green},
+  {n:'الريادة في الطاقة', v:17, c:C.green},
 ];
 const topicEl = document.getElementById('topicList');
 if(topicEl) topicEl.innerHTML = topics.map(t=>`
   <div class="topic-row">
     <div class="t-dot" style="background:${t.c};box-shadow:0 0 8px ${t.c}60"></div>
     <div class="t-nm">${t.n}</div>
-    <div class="t-pct">${Math.round(t.v/179*100)}%</div>
+    <div class="t-pct">${Math.round(t.v/191*100)}%</div>
     <div class="t-n" style="color:${t.c}">${t.v}</div>
   </div>`).join('');
 
@@ -653,7 +653,7 @@ new Chart(document.getElementById('challengeChart'),{
   data:{
     labels:['صحة الإنسان','استدامة البيئة','اقتصاديات المستقبل','الريادة في الطاقة'],
     datasets:[{
-      data:[9,10,5,2],
+      data:[10,11,5,2],
       backgroundColor:[C.teal,C.purple,C.goldb,C.green],
       borderRadius:8,borderSkipped:false
     }]
@@ -669,10 +669,10 @@ if(radarEl) new Chart(radarEl,{
     labels:['نموذج مصغر','براءة اختراع','سجل تجاري','دعم سابق'],
     datasets:[{
       data:[
-        Math.round(72/179*100),
-        Math.round(20/179*100),
-        Math.round(8/179*100),
-        Math.round(5/179*100)
+        Math.round(77/191*100),
+        Math.round(21/191*100),
+        Math.round(8/191*100),
+        Math.round(5/191*100)
       ],
       backgroundColor:'rgba(0,191,156,0.15)',
       borderColor:'#00bf9c',
@@ -697,10 +697,10 @@ if(radarEl) new Chart(radarEl,{
 const readyEl = document.getElementById('readyGrid');
 if(readyEl){
   const readyItems=[
-    {ico:'🧪',lbl:'نموذج مصغر',yes:72,total:179},
-    {ico:'📜',lbl:'براءة اختراع',yes:20,total:179},
-    {ico:'🏪',lbl:'سجل تجاري',yes:8,total:179},
-    {ico:'🤲',lbl:'دعم سابق',yes:5,total:179},
+    {ico:'🧪',lbl:'نموذج مصغر',yes:77,total:191},
+    {ico:'📜',lbl:'براءة اختراع',yes:21,total:191},
+    {ico:'🏪',lbl:'سجل تجاري',yes:8,total:191},
+    {ico:'🤲',lbl:'دعم سابق',yes:5,total:191},
   ];
   readyEl.innerHTML = readyItems.map(it=>{
     const pct = Math.round(it.yes/it.total*100);
